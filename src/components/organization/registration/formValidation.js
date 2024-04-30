@@ -4,7 +4,7 @@ export const formValidation = (values) => {
     // email validation pattern
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     // phone validation pattern
-    const phonePattern = /^[0]{1}[0-9]{9}$/;
+    const phonePattern = /^[0-9]{10}$/;
     // can only contain numbers
     const numberPattern = /^[0-9]*$/;
     // can only contain letters and spaces

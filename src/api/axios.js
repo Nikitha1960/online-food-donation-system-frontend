@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export default axios.create({
-    baseURL: 'http://localhost:8070'
+    baseURL: 'https://online-food-donation-system-backend-1.onrender.com'
 });

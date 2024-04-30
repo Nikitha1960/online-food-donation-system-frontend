@@ -15,7 +15,7 @@ export default function RejectedDonationsCard(props) {
     }).then((willDelete) => {
       if (willDelete) {
         axios
-          .delete(`http://localhost:8070/donator/deleteDonation/${id}`)
+          .delete(`https://online-food-donation-system-backend-1.onrender.com/donator/deleteDonation/${id}`)
           .then((res) => {
             if (willDelete) {
               swal("Item Succesfully Deleted!!", {

@@ -28,7 +28,7 @@ export default function AdminReviewOrg() {
     const fetchOrg=async()=>{
         console.log(id)
         await axios
-        .get(`http://localhost:8070/admin/vieworg/${id}`)
+        .get(`https://online-food-donation-system-backend-1.onrender.com/admin/vieworg/${id}`)
         .then((res)=>{
             console.log(res)
             setOrgId(res.data.org._id);
@@ -74,7 +74,7 @@ export default function AdminReviewOrg() {
       sname
     };
 //     await axios
-//       .put(`http://localhost:8070/admin/editorg/${id}`, Organization)
+//       .put(`https://online-food-donation-system-backend-1.onrender.com/admin/editorg/${id}`, Organization)
 //       .then((res) => {
 //         console.log(res);
 //       })
@@ -92,7 +92,7 @@ swal({
   }).then((willDelete) => {
     if (willDelete) {
       axios
-        .put(`http://localhost:8070/admin/editorg/${id}`, Organization)
+        .put(`https://online-food-donation-system-backend-1.onrender.com/admin/editorg/${id}`, Organization)
         .then(() => {
           if (willDelete) {
             swal("The Organization Details Successfully Updated !", { icon: "success" })
@@ -119,7 +119,7 @@ swal({
       }).then((willDelete) => {
         if (willDelete) {
           axios
-            .put(`http://localhost:8070/admin/uporgstatus/${id}`)
+            .put(`https://online-food-donation-system-backend-1.onrender.com/admin/uporgstatus/${id}`)
             .then(() => {
               if (willDelete) {
                 swal("The Organization Register Request Has Been Successfully Approved!", { icon: "success" })
@@ -146,7 +146,7 @@ const onDelete = (id)=>{
       }).then((willDelete) => {
         if (willDelete) {
           axios
-            .delete(`http://localhost:8070/admin/deletereqorg/${id}`)
+            .delete(`https://online-food-donation-system-backend-1.onrender.com/admin/deletereqorg/${id}`)
             .then(() => {
               if (willDelete) {
                 swal("The Organization Register Request Has Been Successfully Deleted!", { icon: "success" })

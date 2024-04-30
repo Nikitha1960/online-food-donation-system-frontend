@@ -19,7 +19,7 @@ export default function EditDonation() {
     setLoading(true);
     const fetchUser = async () => {
       await axios
-        .get(`http://localhost:8070/donator/getOneDonation/${id}`)
+        .get(`https://online-food-donation-system-backend-1.onrender.com/donator/getOneDonation/${id}`)
         .then((res) => {
           setLoading(false);
           setDonationTitle(res.data.donation.donationTitle);
@@ -51,7 +51,7 @@ export default function EditDonation() {
       donationDescription,
     };
     await axios
-      .put(`http://localhost:8070/donator/updateDonation/${id}`, donation)
+      .put(`https://online-food-donation-system-backend-1.onrender.com/donator/updateDonation/${id}`, donation)
       .then((res) => {
         setLoading(false);
         swal("Donation update succesfully", "", "success").then((value) => {

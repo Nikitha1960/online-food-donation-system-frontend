@@ -23,7 +23,7 @@ export default function DonatorCard() {
   useEffect(() => {
     //fetching all inbound item data from the database
     axios
-      .get("http://localhost:8070/donator/getDonations")
+      .get("https://online-food-donation-system-backend-1.onrender.com/donator/getDonations")
       .then((res) => {
         if (res.data.length > 0) {
           setDonations(res.data);
@@ -92,7 +92,7 @@ export default function DonatorCard() {
     }).then((willDelete) => {
       if (willDelete) {
         axios
-          .delete(`http://localhost:8070/donator/deleteDonation/${id}`)
+          .delete(`https://online-food-donation-system-backend-1.onrender.com/donator/deleteDonation/${id}`)
           .then((res) => {
             if (willDelete) {
               swal("Donation Succesfully Deleted!!", {

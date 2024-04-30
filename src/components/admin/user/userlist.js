@@ -22,7 +22,7 @@ export default function GetUserList() {
 
     const getReqOrgList=async()=>{
         try{
-            const data=await axios.get(`http://localhost:8070/admin/getusers`);
+            const data=await axios.get(`https://online-food-donation-system-backend-1.onrender.com/admin/getusers`);
             setDatatable(data.data)
 
         }catch(e){

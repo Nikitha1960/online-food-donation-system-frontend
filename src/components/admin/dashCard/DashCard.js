@@ -13,7 +13,7 @@ const [datatable2,setDatatable2]=useState([]);
 
 const getReqOrgList=async()=>{
   try{
-      const data=await axios.get(`http://localhost:8070/admin/reqorglist`);
+      const data=await axios.get(`https://online-food-donation-system-backend-1.onrender.com/admin/reqorglist`);
       setDatatable(data.data)
 
   }catch(e){
@@ -23,7 +23,7 @@ const getReqOrgList=async()=>{
 
 const getReqFundList=async()=>{
   try{
-      const data2=await axios.get(`http://localhost:8070/admin/reqfunds`);
+      const data2=await axios.get(`https://online-food-donation-system-backend-1.onrender.com/admin/reqfunds`);
       setDatatable2(data2.data2)
 
   }catch(e){

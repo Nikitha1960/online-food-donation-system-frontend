@@ -27,7 +27,7 @@ export default function RequesterSignUp() {
       password,
     };
 
-    axios.post("http://localhost:8070/requester/requesterSignup", signup).then((res) => {
+    axios.post("https://online-food-donation-system-backend-1.onrender.com/requester/requesterSignup", signup).then((res) => {
       swal("Succesfully Signed up", "", "success").then((value) => {
         if (value) {
           navigate("../signin");

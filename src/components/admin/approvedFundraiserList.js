@@ -22,7 +22,7 @@ export default function ApprovedFundraiser() {
 
     const getReqOrgList=async()=>{
         try{
-            const data=await axios.get(`http://localhost:8070/admin/approvedfunds`);
+            const data=await axios.get(`https://online-food-donation-system-backend-1.onrender.com/admin/approvedfunds`);
             setDatatable(data.data)
 
         }catch(e){
@@ -50,7 +50,7 @@ export default function ApprovedFundraiser() {
           }).then((willDelete) => {
             if (willDelete) {
               axios
-                .delete(`http://localhost:8070/fund/delete/${id}`)
+                .delete(`https://online-food-donation-system-backend-1.onrender.com/fund/delete/${id}`)
                 .then(() => {
                   if (willDelete) {
                     swal("The Fundraiser Request Has Been Successfully Deleted!", { icon: "success" })
